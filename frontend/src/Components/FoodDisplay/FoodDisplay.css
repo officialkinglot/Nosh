@@ -1,0 +1,85 @@
+.food-display {
+    margin-top: 30px;
+  }
+  
+  .food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+  }
+  
+  .food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+  }
+  
+  .closed-message {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .closed-message h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
+  .closed-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .entertainment {
+    margin-top: 30px;
+  }
+  
+  .entertainment p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .video-container {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  .entertainment-video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 10px;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .food-display h2 {
+      font-size: max(4vw, 20px);
+    }
+  
+    .food-display-list {
+      gap: 20px;
+      row-gap: 40px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .food-display h2 {
+      font-size: max(5vw, 18px);
+      text-align: center;
+    }
+  
+    .food-display-list {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      row-gap: 30px;
+    }
+  
+    .entertainment-video {
+      width: 100%; /* Further widen the video on smaller screens */
+    }
+  }
+  

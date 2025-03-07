@@ -1,0 +1,196 @@
+ /* General Styles */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #262f90fa;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.admin-navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.admin-logo {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.admin-app-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: chartreuse;
+}
+
+.admin-user-info {
+  text-align: right;
+  margin-right: 20px;
+  font-weight: bold;
+  display: flex;
+
+}
+
+.admin-user-info .admin-user-name,
+.admin-user-info .admin-user-phone,
+.admin-user-info .admin-user-status,
+.admin-user-info .admin-user-last-login,
+.admin-user-info .admin-user-last-logout {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.admin-user-last-login,
+.admin-user-last-logout {
+  font-size: 0.8rem;
+  color: #ced4da;
+}
+
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+}
+
+.admin-logout-button {
+  background-color: #ff4757;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.admin-user-phone{
+  color: #b9f101;
+}
+
+
+.admin-logout-button:hover {
+  background-color: #000000;
+}
+
+.admin-logout-button:active {
+  background-color: #c23616;
+}
+
+/* Current Time Styles */
+.admin-current-time {
+  font-size: 0.9rem;
+  color: #dff803;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.admin-current-time:hover {
+  color: #adb5bd;
+}
+
+/* Responsive Styles */
+
+/* Medium Devices (Tablets, 768px and above) */
+@media (max-width: 1024px) {
+  .admin-navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .admin-app-name {
+    font-size: 1rem;
+  }
+
+  .admin-user-info {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .admin-navbar-right {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .admin-profile {
+    height: 35px;
+    width: 35px;
+  }
+
+  .admin-logout-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Devices (Phones, 480px and below) */
+@media (max-width: 480px) {
+  .admin-navbar {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  .admin-navbar-logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .admin-logo {
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .admin-app-name {
+    font-size: 0.9rem;
+  }
+
+  .admin-user-info {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .admin-user-info p {
+    font-size: 0.8rem;
+  }
+
+  .admin-navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .admin-profile {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .admin-logout-button {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .admin-current-time {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

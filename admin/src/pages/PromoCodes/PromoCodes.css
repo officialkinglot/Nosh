@@ -1,0 +1,218 @@
+.promo-code-container {
+  max-width: 1000px;
+  margin: auto auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #614a4a, #206753);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  margin-top: 100px;
+}
+
+.promo-code-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.promo-title {
+  font-size: 2em;
+  font-weight: 900;
+  color: #a7ff03;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.promo-instructions {
+  font-size: 1em;
+  color: #004de8;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.promo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.promo-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #fdfdfd;
+}
+
+.promo-input:focus {
+  border-color: #0069d9;
+  box-shadow: 0 0 10px rgba(0, 105, 217, 0.3);
+}
+
+.promo-button {
+  padding: 12px 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.promo-message {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #0069d9;
+  font-weight: bold;
+  text-align: center;
+}
+
+.promo-lists-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.promo-list-section {
+  flex: 1;
+  color: rgb(200, 255, 0);
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+  font-weight: bold;
+  color: rgb(125, 244, 6);
+}
+
+.promo-item {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.promo-item.expired {
+  background-color: #06544b;
+  color: #f3f3f3;
+}
+
+.promo-item:hover {
+  background-color: #05334f;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.promo-item span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.time-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.promo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-size: 0.85em;
+  border: 1px solid #ddd;
+}
+
+.promo-table th, .promo-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.promo-table th {
+  background-color: #06544b;
+  color: #f3f3f3;
+  font-weight: bold;
+}
+
+.promo-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.promo-table tr:hover {
+  background-color: #e9e9e9;
+}
+
+.delete-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+@media (max-width: 600px) {
+  .promo-code-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .promo-title {
+    font-size: 1.8em;
+  }
+
+  .promo-instructions {
+    font-size: 0.9em;
+  }
+
+  .promo-input {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .promo-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .promo-item {
+    font-size: 0.9em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .promo-lists-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-list-section {
+    width: 100%;
+  }
+}

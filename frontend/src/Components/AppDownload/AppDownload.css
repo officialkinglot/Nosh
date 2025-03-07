@@ -1,0 +1,223 @@
+.app-download {
+  padding: 20px;
+  text-align: center;
+ 
+}
+
+.line {
+  border: none;
+  border-top: 3px solid #2528d4;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.after {
+  border: none;
+  border-top: 3px solid #2528d4;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.app-download-platforms {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.app-download-platforms img {
+  max-width: 150px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.admin {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.password-prompt {
+  margin-top: 10px;
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 10px auto;
+}
+
+.password-prompt form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-prompt input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.password-prompt button {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.password-prompt button[type="button"] {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+}
+
+.events {
+  padding: 20px;
+  margin-top: 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.events h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.events button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+ 
+}
+
+.form-container h3 {
+  color: #333;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.form-container button {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.video-container {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .app-download-platforms img {
+    max-width: 100px;
+  }
+
+  .form-container {
+    width: 95%;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+
+  .form-container button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-download-platforms img {
+    max-width: 80px;
+  }
+
+  .form-container {
+    width: 98%;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 12px;
+  }
+
+  .form-container button {
+    font-size: 14px;
+  }
+}

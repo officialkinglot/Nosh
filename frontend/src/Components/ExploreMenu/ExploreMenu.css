@@ -1,0 +1,255 @@
+ /* Base styles (Desktop and larger screens) */
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #262626;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.explore-menu h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: floatUp 3s ease-in-out infinite; /* Constant floating effect */
+    background: linear-gradient(90deg, #2e2ec4, #08f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.explore-menu h1:hover {
+    animation: glow 1.5s infinite alternate; /* Hover effect to add glow */
+}
+
+.explore-menu-text {
+    max-width: 60%;
+    color: #03626c;
+    margin: 0 auto;
+    font-size: 1.2em; 
+    animation: fadeIn 2s ease-in-out, moveSlightly 4s ease-in-out infinite; /* Constant movement */
+    line-height: 1.5;
+    font-weight: bold;
+    opacity: 0.9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.explore-menu-text:hover {
+    animation: glowText 1.5s infinite alternate; /* Hover effect for glowing text */
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+    animation: scaleUp 1s ease-in-out;
+ 
+    
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-menu-list-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+    color: #be7500;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+    animation: fadeInScale 1.2s ease-in-out;
+    transition: color 0.3s ease;
+}
+
+.explore-menu-list-item p:hover {
+    color: #2e2ec4;
+}
+
+.explore-menu hr {
+    margin: 10px 0px;
+    height: 2.3px; /* Increased thickness */
+    background-color: #2e2ec4;
+    border: none;
+    animation: drawLine 2s ease-in-out;
+}
+
+.explore-menu-list-item .active {
+    border: 4px solid rgb(6, 21, 236);
+    padding: 2px;
+}
+
+/* Constant animations for movement */
+@keyframes floatUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveSlightly {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(46, 46, 196, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(46, 46, 196, 1);
+    }
+}
+
+@keyframes glowText {
+    0% {
+        color: #808080;
+    }
+    100% {
+        color: #2e2ec4;
+    }
+}
+
+/* Enhanced animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes drawLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Small tablet and large phone styles */
+@media (max-width: 900px) {
+    .explore-menu h1 {
+        font-size: 20px;
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .explore-menu-list-item img {
+        width: 60px;
+        min-width: auto;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .explore-menu-text {
+        font-size: 12px;
+    }
+
+    .explore-menu hr {
+        margin: 10px 0px;
+        height: 2.5px; /* Increased thickness */
+        background-color: #2e2ec4;
+        border: none;
+        animation: drawLine 2s ease-in-out;
+    }
+
+    .explore-menu-list {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .explore-menu-list-item img {
+        width: 50px;
+        min-width: 50px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 14px;
+        color: #466302;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 400px) {
+    .explore-menu h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .explore-menu-list {
+        gap: 10px;
+    }
+
+    .explore-menu-list-item img {
+        width: 45px;
+        min-width: 45px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 12px;
+    }
+}

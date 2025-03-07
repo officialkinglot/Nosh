@@ -1,0 +1,120 @@
+.delivered-orders {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.delivered-orders h1 {
+  color: #0d00c1;
+  margin-bottom: 1px;
+  font-size:25px;
+}
+
+.total{
+  font-size: 17px;
+ 
+}
+
+.order-list {
+  display: grid;
+  gap: 20px;
+}
+
+.order-item {
+  border: 2px solid tomato;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item-name p{
+  font-size:18px;
+  font-weight: bold;
+  color: #cc0000;
+  display: flex;
+}
+
+.order-item-status {
+  font-size: 14px;
+  color: rgb(7, 101, 7);
+ 
+}
+
+.order-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item-address {
+  font-size: 14px;
+  color: #138100;
+}
+
+.order-item-phone {
+  font-size: 14px;
+  color: blueviolet;
+}
+
+.item-price {
+  font-size: 16px;
+  color: blue;
+  font-weight: bold;
+}
+
+.order-food {
+  margin-top: 10px;
+}
+
+.order-item-food {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.food-item {
+  font-size: 14px;
+  color: #333;
+}
+
+.order-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pickup-time,
+.delivery-time {
+  font-weight: bold;
+  font-size: small;
+}
+
+.pickup-time {
+  color: #007bff;
+}
+
+.delivery-time {
+  color: #28a745;
+  margin-left: 50px;
+  
+}

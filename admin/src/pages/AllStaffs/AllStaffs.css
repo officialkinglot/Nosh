@@ -1,0 +1,100 @@
+.all-staff {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .all-staff h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: blue;
+  }
+  
+  .all-staff table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .all-staff table th,
+  .all-staff table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: darkgreen;
+  }
+  
+  .all-staff table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+  
+  .all-staff table td input,
+  .all-staff table td select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: 900;
+  }
+  
+  .all-staff button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 23px;
+    margin-left: 10px;
+  }
+  
+  .all-staff button:hover {
+    background-color: #0056b3;
+  }
+  
+  .all-staff .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .all-staff .ranked-list {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .all-staff .ranked-list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: blue;
+  }
+  
+  .all-staff .ranked-list ul {
+    list-style-type: none;
+    padding: 0;
+    color: rgb(0, 0, 0);
+  }
+  
+  .all-staff .ranked-list li {
+    margin-bottom: 5px;
+    color: darkgreen;
+  }
+  
+  .all-staff .ranked-list .role-title {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .all-staff .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  
+  .all-staff .delete-button:hover {
+    background-color: #c82333;
+  }
+  

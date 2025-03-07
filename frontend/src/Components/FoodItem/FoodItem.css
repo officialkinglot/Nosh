@@ -1,0 +1,393 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #00000015;
+  transition: 0.3s;
+  animation: fadeIn 3s;
+  overflow: hidden; /* Ensure content does not overflow */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Add a white background for clean look */
+}
+
+.food-item.unavailable .food-item-name-rating p,
+.food-item.unavailable .food-item-price {
+  text-decoration: line-through; /* Cross the title and price */
+  color: #a69898; /* Faded color */
+}
+
+.food-item-image {
+  width: 100%;
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info {
+  padding: 15px;
+  font-weight: bold;
+  flex-grow: 1; /* Allow the info section to grow and take available space */
+  background-color:white; /* Light background for the info section */
+  border-radius: 0px 0px 15px 15px;
+  position: relative; /* Ensure the badge is positioned correctly */
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allow wrapping if the content is too long */
+}
+
+.food-item-name-rating p {
+  font-weight: bolder;
+  font-size: 18px;
+  flex-shrink: 0; /* Prevent the text from shrinking */
+  color: #000000; /* Black color for the food item titles */
+}
+
+.food-item-name-rating img {
+  width: 70px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.food-item-description {
+  color: rgb(32, 0, 241);
+  font-size: 15px;
+  font-weight: bolder;
+  margin-top: 10px; /* Add margin to separate from other elements */
+  word-wrap: break-word; /* Ensure text wraps correctly */
+  overflow-wrap: break-word; /* Ensure text wraps correctly */
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+}
+
+.food-item-price-availability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.food-item-price {
+  font-size: 18px;
+  margin: 10px 0px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+.food-item-price.unavailable {
+  color: #ccc; /* Faded color for the price */
+}
+
+.food-item-price .currency-symbol {
+  font-weight: bold;
+  color: rgb(5, 103, 5);
+}
+
+.food-item-price .price-value {
+  color: green;
+  font-weight: bold;
+}
+
+.food-item-img-container {
+  position: relative;
+}
+
+.food-item-img-container .add {
+  width: 40px; /* Slightly reduced width */
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(0, 38, 255); /* Blue background for add button */
+  padding: 6px; /* Slightly reduced padding */
+  transition: background-color 0.3s;
+  animation: addButtonPulse 1.5s infinite;
+}
+
+@keyframes addButtonPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.food-item-img-container .add:hover {
+  background-color: rgb(0, 98, 205); /* Darker blue on hover */
+}
+
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 19px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.food-item-counter img {
+  width: 30px;
+}
+
+.availability-badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+}
+
+.availability-badge.available {
+  background-color: green;
+}
+
+.availability-badge.unavailable {
+  background-color: red;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
+  .food-item {
+    width: 90%;
+  }
+
+  .availability-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-item {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+
+  .food-item-name-rating p {
+    font-size: 16px;
+  }
+
+  .food-item-price {
+    font-size: 16px;
+  }
+
+  .food-item-description {
+    font-size: 14px;
+    margin-top: 8px; /* Adjust margin for smaller screens */
+  }
+
+  .food-item-img-container .add {
+    width: 35px; /* Slightly reduced width */
+    bottom: 10px;
+    right: 10px;
+    padding: 5px; /* Slightly reduced padding */
+  }
+
+  .food-item-counter {
+    bottom: 10px;
+    right: 10px;
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  .food-item-counter img {
+    width: 25px;
+  }
+
+  .availability-badge {
+    font-size: 12px; /* Increased font size for better visibility */
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .food-item {
+    width: 100%;
+  }
+
+  .food-item-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .food-item-info {
+    padding: 10px;
+  }
+
+  .food-item-name-rating p {
+    font-size: 15px; /* Reduced font size for mobile view */
+  }
+
+  .food-item-price {
+    font-size: 16px;
+  }
+
+  .food-item-description {
+    font-size: 15px;
+    margin-top: 6px; /* Adjust margin for smaller screens */
+  }
+
+  .food-item-img-container .add {
+    width: 38px; /* Slightly reduced width */
+    bottom: 8px;
+    right: 8px;
+    padding: 4px; /* Slightly reduced padding */
+  }
+
+  .food-item-counter {
+    bottom: 8px;
+    right: 8px;
+    padding: 3px;
+    font-size: 19px;
+  }
+
+  .food-item-counter img {
+    width: 27px;
+  }
+
+  .availability-badge {
+    font-size: 10px; /* Increased font size for better visibility */
+    padding: 3px 6px;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 375px) {
+  .food-item-name-rating p {
+    font-size: 14px; /* Further reduced font size for very small screens */
+  }
+
+  .food-item-price {
+    font-size: 12px;
+  }
+
+  .food-item-description {
+    font-size: 12px;
+    margin-top: 4px; /* Adjust margin for very small screens */
+  }
+
+  .availability-badge {
+    font-size: 8px; /* Increased font size for better visibility */
+    padding: 2px 4px;
+  }
+}
+
+.entertaining-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.entertaining-content p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.entertaining-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --rated-star-color: rgb(2, 122, 28); /* Define the rated star color */
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allow wrapping if the content is too long */
+}
+
+.food-item-name-rating p {
+  font-weight: bolder;
+  font-size: 18px;
+  flex-shrink: 0; /* Prevent the text from shrinking */
+  color: #000000; /* Black color for the food item titles */
+}
+
+.food-item-name-rating img {
+  width: 70px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px; /* Reduce the gap between stars */
+  width: auto; /* Allow the width to adjust automatically */
+  height: auto; /* Allow the height to adjust automatically */
+}
+
+.rating-stars .star {
+  font-size: 16px; /* Reduce the font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+  cursor: pointer;
+  font-weight: 800; /* Make the star rating thicker */
+}
+
+.rating-stars .star.rated {
+  color: var(--rated-star-color); /* Use the CSS variable for the rated star color */
+  text-shadow: none; /* Remove shadow for rated stars */
+}
+
+/* frontend/src/components/StarRating.css */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem; /* Adds space between stars */
+}
+
+.star {
+  color: #5c5454;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-weight: 800; /* Make the star rating thicker */
+}
+
+.star.filled {
+  color: #5900ff;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #ffcc00;
+}
+
+/* Default font size for larger screens */
+.star-rating {
+  font-size: 1.2rem; /* Reduced default size */
+}
+
+/* Adjust font size for tablets */
+@media (max-width: 768px) {
+  .star-rating {
+    font-size: 1rem; /* Reduced size for tablets */
+  }
+}
+
+/* Adjust font size for mobile devices */
+@media (max-width: 480px) {
+  .star-rating {
+    font-size: 0.8rem; /* Reduced size for mobile devices */
+  }
+}

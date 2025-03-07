@@ -1,0 +1,237 @@
+ /* Wrapper class for Dispatch Menu to scope styles */
+.dispatch-menu {
+  background: linear-gradient(135deg, #010101 0%, #000000 100%);
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.dispatch-menu h3{
+  color: #00c8e2;
+}
+
+.dispatch-name {
+  color: #073ded; /* Tomato color */
+  font-weight: bold;
+}
+
+.dispatch-id {
+  color: #62a505; /* SteelBlue color */
+  font-weight: bold;
+}
+
+.dispatch-phone{
+  color: #fbfbfb; /* SteelBlue color */
+  font-weight: bold;
+}
+
+.item-item,
+.item-price {
+  font-size: 16px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr  1fr 1fr;
+  align-items: start;
+  gap: 20px;
+  border: 2px solid tomato;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: rgb(0, 0, 180);
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 700;
+  margin: 1px 1px;
+}
+
+.order-item-name {
+  font-size: 18px;
+  display: flex;
+  font-weight: bold;
+  color: #060606;
+}
+
+.order-item-address p {
+  font-size: 14px;
+  color: rgb(18, 102, 3);
+}
+
+.order-item-phone {
+  font-size: 14px;
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.order-item-date {
+  color: rgb(248, 0, 66);
+  font-weight: bold;
+}
+
+.order-item-food span {
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  color: rgba(3, 3, 3, 0.757);
+}
+
+.order-item select {
+  background-color: #ffe8e4;
+  border: 2px solid #b848c3;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.order-item select:hover {
+  color: rgb(16, 2, 97);
+  background-color: #ffd6d6;
+}
+
+.order-item-food2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr 1fr));
+  gap: 1px;
+  align-items: center;
+}
+
+.food-item {
+  white-space: nowrap;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Media queries for responsiveness */
+
+/* For large tablets and small desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .order-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .order-item select {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .order-item {
+    grid-template-columns: 1fr;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .order-item select {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .order-item-food2 {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  }
+
+  .dispatch-menu {
+    margin-left: 20px;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .order-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .order-item select {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .order-item-food2 {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+  }
+
+  .dispatch-menu {
+    margin-left: 10px;
+  }
+}
+
+/* For very small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+  .order-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    padding: 6px;
+  }
+
+  .order-item select {
+    font-size: 8px;
+    padding: 4px;
+  }
+
+  .order-item-food2 {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 3px;
+  }
+
+  .dispatch-menu {
+    margin-left: 5px;
+  }
+}
+
+/* General container styling */
+.order-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,183 @@
+.events-container {
+    background: linear-gradient(135deg, #5b6e82 0%, #e0e0e0 100%);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  
+  .events-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .event-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 20px;
+    border: 2px solid tomato;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: black;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  .event-item h3 {
+    font-size: 18px;
+    display: flex;
+    font-weight: bold;
+    color: #cc0000;
+  }
+  
+  .event-item p {
+    font-size: 14px;
+    color: rgb(19, 129, 0);
+  }
+  
+  .event-item .yourname {
+    color: #b848c3;
+  }
+  
+  .event-item .food {
+    color: #300230;
+  }
+  
+  .event-item .date {
+    color: #15023b;
+  }
+  
+  .eventselector {
+    background-color: #ffe8e4;
+    border: 2px solid #b848c3;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .eventselector:hover {
+    color: rgb(16, 2, 97);
+    background-color: #ffd6d6;
+  }
+  
+  .delete-button {
+    background-color: #ff4d4d;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Move the button to the right */
+  }
+  
+  .delete-button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  /* For large tablets and small desktops (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .event-item {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      font-size: 13px;
+      padding: 12px;
+    }
+  
+    .eventselector {
+      font-size: 13px;
+      padding: 7px;
+    }
+  }
+  
+  /* For tablets and smaller screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .eventselector {
+      width: 100%;
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .event-item {
+      grid-template-columns: 1fr;
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .eventselector {
+      width: 100%;
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  
+  /* For mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .eventselector {
+      width: 100%;
+      padding: 6px;
+      font-size: 10px;
+    }
+  
+    .event-item {
+      display: flex;
+      flex-direction: column;
+      font-size: 10px;
+      padding: 8px;
+    }
+  
+    .eventselector {
+      font-size: 10px;
+      padding: 5px;
+    }
+  }
+  
+  /* For very small mobile devices (max-width: 320px) */
+  @media (max-width: 320px) {
+    .eventselector {
+      width: 100%;
+      padding: 4px;
+      font-size: 8px;
+    }
+  
+    .event-item {
+      display: flex;
+      flex-direction: column;
+      font-size: 8px;
+      padding: 6px;
+    }
+  
+    .eventselector {
+      font-size: 8px;
+      padding: 4px;
+    }
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

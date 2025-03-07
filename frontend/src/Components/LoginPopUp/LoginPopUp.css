@@ -1,0 +1,203 @@
+.login-popup {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-popup-container {
+  width: 90%;
+  max-width: 400px;
+  color: #2b2929;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s;
+}
+
+.login-pop-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.login-pop-title img {
+  width: 16px;
+  cursor: pointer;
+  height: 16px;
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-popup-inputs input[name="name"] {
+  color: blue;
+}
+
+.login-popup-inputs input[name="email"],
+.login-popup-inputs input[name="phone"] {
+  color: green;
+}
+
+.login-popup-container button {
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(71, 114, 255);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-popup-container button:hover {
+  background-color: rgb(51, 94, 225);
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-popup-condition input {
+  margin-top: 2px;
+}
+
+.login-popup p span {
+  color: tomato;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-popup {
+    align-items: flex-start;
+    padding-top: 20px; /* Adjust this value to shift the container up */
+  }
+
+  .login-popup-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .login-popup-inputs input {
+    font-size: 14px;
+  }
+
+  .login-popup-container button {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-popup-container {
+    max-width: 600px;
+    padding: 30px 40px;
+  }
+
+  .login-popup-inputs input {
+    font-size: 18px;
+  }
+
+  .login-popup-container button {
+    font-size: 18px;
+  }
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* Space for icon */
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.password-toggle-icon:hover {
+  color: #555;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 45%;
+  width: 24px;
+  height: 24px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(71, 114, 255);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: rgb(51, 94, 225);
+}

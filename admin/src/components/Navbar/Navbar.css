@@ -1,0 +1,93 @@
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #343a40;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.admin-navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.admin-logo {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.admin-app-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.admin-user-info {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.admin-user-info .admin-user-name,
+.admin-user-info .admin-user-phone {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+}
+
+.admin-logout-button {
+  background-color: #ff4757;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.admin-logout-button:hover {
+  background-color: #e84118;
+}
+
+.admin-logout-button:active {
+  background-color: #c23616;
+}
+
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-user-info {
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+
+  .admin-navbar-right {
+    align-self: flex-end;
+  }
+}
+
+
