@@ -1,19 +1,21 @@
-  import { defineConfig } from 'vite';
+ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path'; // Import the path module for resolving aliases
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/',
+  plugins: [react()], // Enable React support
+  base: '/', // Base public path for the application
   build: {
-    outDir: 'dist',
+    outDir: 'dist', // Output directory for the build
     rollupOptions: {
       external: [
+        // Externalize dependencies that should not be bundled
         'react',
         'react-dom',
         'react-router-dom',
         'react-toastify',
         'react-toastify/dist/ReactToastify.css',
-        'axios', // Externalize axios
+        'axios',
         'lodash',
         'moment',
         'moment-timezone',
@@ -27,19 +29,21 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src',
-      '@components': '/src/components',
-      '@pages': '/src/pages',
-      '@utils': '/src/utils',
+      // Define aliases for easier imports
+      '@': path.resolve(__dirname, './src'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
   optimizeDeps: {
     include: [
+      // Pre-bundle dependencies for faster development
       'react',
       'react-dom',
       'react-router-dom',
       'react-toastify',
-      'axios', // Pre-bundle axios
+      'axios',
       'lodash',
       'moment',
       'moment-timezone',
